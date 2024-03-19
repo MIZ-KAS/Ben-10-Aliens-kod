@@ -38,4 +38,4 @@ jobs:
             docker stop ben10file || true
             docker rm ben10file || true
             docker pull ${{ secrets.DOCKERHUB_USERNAME }}/ben10file:${{ github.sha }}
-            docker run -d --name ben10file -p 8181:80 ${{ secrets.DOCKERHUB_USERNAME }}/kod:${{ github.sha }}
+            docker run -d --name ben10file -p 8181:80 ${{ secrets.DOCKERHUB_USERNAME }}/ben10file:${{ github.sha }}
